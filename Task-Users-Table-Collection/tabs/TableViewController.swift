@@ -59,6 +59,12 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         users.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+
+        print("Tapped \(user.firstName)")
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
         let user = users[indexPath.row]
@@ -68,6 +74,11 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         let url = URL(string: user.image)
 
         cell.imageUser.sd_setImage(with: url, placeholderImage: UIImage(named: "user_placeholder"))
+        
+        cell.imageUser.layer.cornerRadius = CGFloat(5)
+        cell.imageUser.layer.masksToBounds = true
+        cell.imageUser.clipsToBounds = true
+        
         return cell
     }
     
