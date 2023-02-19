@@ -39,7 +39,7 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
         let user = users[indexPath.row]
         
         cell.labelName.text = "\(user.firstName) \(user.lastName)"
@@ -64,7 +64,7 @@ extension CollectionViewController {
         let urlSession = URLSession(configuration: .default)
         
         let dataTask = urlSession.dataTask(with: request) { data, response, error in
-            print(String(data: data!, encoding: .utf8))
+            print(String(data: data!, encoding: .utf8) as Any)
                      
             let decoder = JSONDecoder()
             let root: Root = try! decoder.decode(Root.self, from: data!)

@@ -15,7 +15,7 @@ class TableViewController: UIViewController {
     var users: [User] = []
 
     override func viewDidLoad() {
-        populateStaticData()
+        fetchUsersFromApi()
       
         title = "Users"
         let nib = UINib(nibName: "UserTableViewCell", bundle: nil)
@@ -26,13 +26,33 @@ class TableViewController: UIViewController {
         
     }
     
-    func populateStaticData(){
-        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
-        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
-        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
-        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
+    func fetchUsersFromApi(){
+        
+            let url = URL(string: "https://dummyjson.com/users")!
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            
+            let urlSession = URLSession(configuration: .default)
+            
+            let dataTask = urlSession.dataTask(with: request) { data, response, error in
+                print(String(data: data!, encoding: .utf8)!)
+                         
+                let decoder = JSONDecoder()
+                let root: Root = try! decoder.decode(Root.self, from: data!)
+                
+                self.users = root.users
+                
+                DispatchQueue.main.async {
+                    self.usersTableView.reloadData()
+                }
+            }
+            
+            dataTask.resume()
+        }
+        
     }
-}
+
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,7 +60,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
         let user = users[indexPath.row]
         
         cell.labelName.text = "\(user.firstName) \(user.maidenName) \(user.lastName)"
