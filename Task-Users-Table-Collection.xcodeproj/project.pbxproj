@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B9577E29A229B100A615AA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9577D29A229B100A615AA /* CollectionViewController.swift */; };
+		06B9578029A229C100A615AA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9577F29A229C100A615AA /* TableViewController.swift */; };
+		06B9578329A22B5E00A615AA /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9578229A22B5E00A615AA /* Users.swift */; };
+		06B9578729A22CF100A615AA /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9578529A22CF100A615AA /* UserTableViewCell.swift */; };
+		06B9578829A22CF100A615AA /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B9578629A22CF100A615AA /* UserTableViewCell.xib */; };
+		06B9578B29A2302000A615AA /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 06B9578A29A2302000A615AA /* SDWebImage */; };
+		06B9578E29A232D100A615AA /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9578C29A232D100A615AA /* UserCollectionViewCell.swift */; };
+		06B9578F29A232D100A615AA /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B9578D29A232D100A615AA /* UserCollectionViewCell.xib */; };
 		06E1EC0529A225F900E61173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1EC0429A225F900E61173 /* AppDelegate.swift */; };
 		06E1EC0729A225F900E61173 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1EC0629A225F900E61173 /* SceneDelegate.swift */; };
 		06E1EC0929A225F900E61173 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1EC0829A225F900E61173 /* ViewController.swift */; };
@@ -16,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B9577D29A229B100A615AA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		06B9577F29A229C100A615AA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		06B9578229A22B5E00A615AA /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		06B9578529A22CF100A615AA /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		06B9578629A22CF100A615AA /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		06B9578C29A232D100A615AA /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		06B9578D29A232D100A615AA /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		06E1EC0129A225F900E61173 /* Task-Users-Table-Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-Users-Table-Collection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E1EC0429A225F900E61173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06E1EC0629A225F900E61173 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +46,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06B9578B29A2302000A615AA /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06B9577C29A2299900A615AA /* tabs */ = {
+			isa = PBXGroup;
+			children = (
+				06B9577D29A229B100A615AA /* CollectionViewController.swift */,
+				06B9577F29A229C100A615AA /* TableViewController.swift */,
+			);
+			path = tabs;
+			sourceTree = "<group>";
+		};
+		06B9578129A22B5300A615AA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				06B9578229A22B5E00A615AA /* Users.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		06B9578429A22CA900A615AA /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				06B9578529A22CF100A615AA /* UserTableViewCell.swift */,
+				06B9578629A22CF100A615AA /* UserTableViewCell.xib */,
+				06B9578C29A232D100A615AA /* UserCollectionViewCell.swift */,
+				06B9578D29A232D100A615AA /* UserCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		06E1EBF829A225F900E61173 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +100,9 @@
 		06E1EC0329A225F900E61173 /* Task-Users-Table-Collection */ = {
 			isa = PBXGroup;
 			children = (
+				06B9578429A22CA900A615AA /* cell */,
+				06B9578129A22B5300A615AA /* data */,
+				06B9577C29A2299900A615AA /* tabs */,
 				06E1EC0429A225F900E61173 /* AppDelegate.swift */,
 				06E1EC0629A225F900E61173 /* SceneDelegate.swift */,
 				06E1EC0829A225F900E61173 /* ViewController.swift */,
@@ -83,6 +130,9 @@
 			dependencies = (
 			);
 			name = "Task-Users-Table-Collection";
+			packageProductDependencies = (
+				06B9578A29A2302000A615AA /* SDWebImage */,
+			);
 			productName = "Task-Users-Table-Collection";
 			productReference = 06E1EC0129A225F900E61173 /* Task-Users-Table-Collection.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +161,9 @@
 				Base,
 			);
 			mainGroup = 06E1EBF829A225F900E61173;
+			packageReferences = (
+				06B9578929A2302000A615AA /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 06E1EC0229A225F900E61173 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +178,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06B9578829A22CF100A615AA /* UserTableViewCell.xib in Resources */,
+				06B9578F29A232D100A615AA /* UserCollectionViewCell.xib in Resources */,
 				06E1EC1129A225FB00E61173 /* LaunchScreen.storyboard in Resources */,
 				06E1EC0E29A225FB00E61173 /* Assets.xcassets in Resources */,
 				06E1EC0C29A225F900E61173 /* Main.storyboard in Resources */,
@@ -138,8 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06B9577E29A229B100A615AA /* CollectionViewController.swift in Sources */,
 				06E1EC0929A225F900E61173 /* ViewController.swift in Sources */,
+				06B9578729A22CF100A615AA /* UserTableViewCell.swift in Sources */,
 				06E1EC0529A225F900E61173 /* AppDelegate.swift in Sources */,
+				06B9578029A229C100A615AA /* TableViewController.swift in Sources */,
+				06B9578E29A232D100A615AA /* UserCollectionViewCell.swift in Sources */,
+				06B9578329A22B5E00A615AA /* Users.swift in Sources */,
 				06E1EC0729A225F900E61173 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +418,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		06B9578929A2302000A615AA /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06B9578A29A2302000A615AA /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06B9578929A2302000A615AA /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06E1EBF929A225F900E61173 /* Project object */;
 }
