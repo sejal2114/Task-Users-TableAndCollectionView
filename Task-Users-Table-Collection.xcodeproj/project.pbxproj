@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0635902B29A2ADA1003481CF /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635902A29A2ADA1003481CF /* UserDetailViewController.swift */; };
 		06B9577E29A229B100A615AA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9577D29A229B100A615AA /* CollectionViewController.swift */; };
 		06B9578029A229C100A615AA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9577F29A229C100A615AA /* TableViewController.swift */; };
 		06B9578329A22B5E00A615AA /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9578229A22B5E00A615AA /* Users.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0635902A29A2ADA1003481CF /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		06B9577D29A229B100A615AA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		06B9577F29A229C100A615AA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		06B9578229A22B5E00A615AA /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				06E1EC0D29A225FB00E61173 /* Assets.xcassets */,
 				06E1EC0F29A225FB00E61173 /* LaunchScreen.storyboard */,
 				06E1EC1229A225FB00E61173 /* Info.plist */,
+				0635902A29A2ADA1003481CF /* UserDetailViewController.swift */,
 			);
 			path = "Task-Users-Table-Collection";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				06B9577E29A229B100A615AA /* CollectionViewController.swift in Sources */,
 				06E1EC0929A225F900E61173 /* ViewController.swift in Sources */,
+				0635902B29A2ADA1003481CF /* UserDetailViewController.swift in Sources */,
 				06B9578729A22CF100A615AA /* UserTableViewCell.swift in Sources */,
 				06E1EC0529A225F900E61173 /* AppDelegate.swift in Sources */,
 				06B9578029A229C100A615AA /* TableViewController.swift in Sources */,

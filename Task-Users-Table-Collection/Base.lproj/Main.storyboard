@@ -114,11 +114,11 @@
             </objects>
             <point key="canvasLocation" x="1525.9541984732823" y="81.690140845070431"/>
         </scene>
-        <!--Item 1-->
+        <!--Users-->
         <scene sceneID="meV-fV-SRd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I2a-ex-DMr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="XPt-qY-cAu"/>
+                    <tabBarItem key="tabBarItem" title="Users" id="XPt-qY-cAu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mea-7K-CFq">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -132,6 +132,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mos-Bn-Aaf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2452.6717557251909" y="-524.64788732394368"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="fIB-wR-3UA">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailViewController" id="PGg-1x-k26" customClass="UserDetailViewController" customModule="Task_Users_Table_Collection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2qV-Cl-pWO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQK-ZQ-QFe">
+                                <rect key="frame" x="175.66666666666666" y="125" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dsj-YM-4fw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yQK-ZQ-QFe" firstAttribute="centerX" secondItem="2qV-Cl-pWO" secondAttribute="centerX" id="44l-6s-oOn"/>
+                            <constraint firstItem="yQK-ZQ-QFe" firstAttribute="top" secondItem="Dsj-YM-4fw" secondAttribute="top" constant="66" id="u5T-HV-I1g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="yQK-ZQ-QFe" id="wfB-Le-OiK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quf-fW-nEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2763" y="-1202"/>
         </scene>
     </scenes>
     <resources>

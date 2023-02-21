@@ -26,10 +26,10 @@ class CollectionViewController: UIViewController {
     }
     
     func populateStaticData(){
-        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
-        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
-        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
-        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
+//        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
+//        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
+//        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
+//        users.append(User(firstName: "dfsd", lastName: "bjvbn", maidenName: "ttry", image: "https://robohash.org/facilisdignissimosdolore.png", eyeColor: "dfds", gender: "fdrgdr", hair: Hair(color: "fsdf", type: "fdgfd")))
     }
 }
 

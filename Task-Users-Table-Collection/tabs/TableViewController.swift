@@ -61,7 +61,13 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
-
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let viewController = storyboard.instantiateViewController(withIdentifier: "UserDetailViewController") as! UserDetailViewController
+        
+        viewController.user = user
+        self.navigationController?.pushViewController(viewController, animated: true)
         print("Tapped \(user.firstName)")
     }
     
